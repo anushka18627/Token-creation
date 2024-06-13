@@ -1,0 +1,37 @@
+
+pragma solidity >=0.6.12 <0.9.0;
+
+contract MyToken_Library {
+
+    // public variables here
+
+    string public tokenName = "Library";
+    string public tokenAbbrv = "LBR";
+    uint public totalSupply = 0;
+
+    // mapping variable here
+
+    mapping(address => uint) public balances;
+
+    // mint function
+
+    function to_mintTokens(address _address,uint _value)public {
+        totalSupply += _value;
+        balances[_address] += _value;
+    }
+    // burn function
+
+    function to_burnTokens(address _address,uint _value)public{
+        if(_value<=balances[_address]){
+            totalSupply -= _value;
+            balances[_address] -=_value;
+        }
+    }
+
+}
+/*
+    few addresses for testing purpose:0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB
+    */
+    
+
+      
