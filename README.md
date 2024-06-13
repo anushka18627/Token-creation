@@ -17,34 +17,41 @@ pragma solidity >=0.6.12 <0.9.0;
        to the amount that is supposed to be burned.
 */
 
-contract MyToken_Library {
+1. Firstly, I have created a contract named mytoken_library. The smart Contracts are basically self-executing statements or programs which are deployed in blockchain that are used to manage data. Then, I have created public variables named tokens. 
+2. The token name which is the name of my token that is library, token abbreviation that is a short form of our token name that is LBR and I have created a uint variable or an unsigned int public variable token supply initially valued as 0. this variable unsigned int public token supply is created to keep a check of number of tokens that is currently circulated or are in circulation initially the value of total supply is zero.
+3. After this I have created a mapping variable here the mapping variable here is used to map the address with the unsigned int variable so that we can keep a check of balances now next we have created a mint function,function named as to_mint tokens I have passed two parameters here address and the unsigned int value or unsigned integer value
+4. Next I have created the burn function that is to_burn tokens and the parameters are the same as the mint tokens that is address and the unsigned int value of address I have used this address 0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB as an example we can use any value of address of our choice then we will deploy our code.
 
-    // public variables here
 
-    string public tokenName = "Library";
-    string public tokenAbbrv = "LBR";
-    uint public totalSupply = 0;
+       contract MyToken_Library {
 
-    // mapping variable here
+       // public variables here
 
-    mapping(address => uint) public balances;
+       string public tokenName = "Library";
+       string public tokenAbbrv = "LBR";
+       uint public totalSupply = 0;
 
-    // mint function
 
-    function to_mintTokens(address _address,uint _value)public {
+       // mapping variable here
+
+       mapping(address => uint) public balances;
+
+       // mint function
+
+       function to_mintTokens(address _address,uint _value)public {
         totalSupply += _value;
         balances[_address] += _value;
-    }
-    // burn function
+       }
+       // burn function
 
-    function to_burnTokens(address _address,uint _value)public{
+       function to_burnTokens(address _address,uint _value)public{
         if(_value<=balances[_address]){
             totalSupply -= _value;
             balances[_address] -=_value;
         }
-    }
+       }
 
-}
+       }
 /*
     few addresses for testing purpose:
     0x78731D3Ca6b7E34aC0F824c42a7cC18A495cabaB
