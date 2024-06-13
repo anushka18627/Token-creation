@@ -17,6 +17,8 @@ pragma solidity >=0.6.12 <0.9.0;
        to the amount that is supposed to be burned.
 */
 
+Explanation :
+
 1. Firstly, I have created a contract named mytoken_library. The smart Contracts are basically self-executing statements or programs which are deployed in blockchain that are used to manage data. Then, I have created public variables named tokens. 
 2. The token name which is the name of my token that is library, token abbreviation that is a short form of our token name that is LBR and I have created a uint variable or an unsigned int public variable token supply initially valued as 0. this variable unsigned int public token supply is created to keep a check of number of tokens that is currently circulated or are in circulation initially the value of total supply is zero.
 3. After this I have created a mapping variable here the mapping variable here is used to map the address with the unsigned int variable so that we can keep a check of balances now next we have created a mint function,function named as to_mint tokens I have passed two parameters here address and the unsigned int value or unsigned integer value
