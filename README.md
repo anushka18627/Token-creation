@@ -4,7 +4,7 @@
 pragma solidity >=0.6.12 <0.9.0;
 
 /*
-       REQUIREMENTS
+       REQUIREMENTS :
     1. Your contract will have public variables that store the details about your coin (Token Name, Token Abbrv., Total Supply)
     2. Your contract will have a mapping of addresses to balances (address => uint)
     3. You will have a mint function that takes two parameters: an address and a value. 
@@ -16,6 +16,10 @@ pragma solidity >=0.6.12 <0.9.0;
     5. Lastly, your burn function should have conditionals to make sure the balance of "sender" is greater than or equal 
        to the amount that is supposed to be burned.
 */
+
+Introduction :
+This Solidity code defines a basic ERC-20 token-like contract with functionalities for minting and burning tokens. It provides a foundational structure for creating your own custom token on the Ethereum blockchain, but additional features and security considerations are necessary for a production-ready implementation.
+
 
 Explanation :
 
